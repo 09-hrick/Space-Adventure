@@ -8,7 +8,6 @@ public class GameOver : MonoBehaviour
     [SerializeField] private GameObject gameStartPanel;
     [SerializeField] private GameObject player;
     [SerializeField] private ScoreManager scoreManager;
-    [SerializeField] public HighScore HighScoreManager;
     [SerializeField] private Text highScorePlaceHolder;
 
     private bool isGameOver = false;
@@ -26,7 +25,7 @@ public class GameOver : MonoBehaviour
         {
             isGameOver = true;
             gameOverPanel.SetActive(true);
-            highScorePlaceHolder.text = HighScoreManager.highScore.ToString();
+            highScorePlaceHolder.text = HighScore.instance.highScore.ToString();
         }
     }
 
