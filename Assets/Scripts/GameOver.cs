@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject gameStartPanel;
     [SerializeField] private GameObject player;
+    [SerializeField] private ScoreManager scoreManager;
     [SerializeField] public HighScore HighScoreManager;
     [SerializeField] private Text highScorePlaceHolder;
 
@@ -45,7 +46,7 @@ public class GameOver : MonoBehaviour
         player.GetComponent<Rigidbody2D>().simulated = false;
         player.GetComponent<BoxCollider2D>().enabled = false;
         player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<ScoreManager>().enabled = false;
+        scoreManager.enabled = false;
     }
 
     private void EnablePlayer()
@@ -53,6 +54,6 @@ public class GameOver : MonoBehaviour
         player.GetComponent<Rigidbody2D>().simulated = true;
         player.GetComponent<BoxCollider2D>().enabled = true;
         player.GetComponent<PlayerMovement>().enabled = true;
-        player.GetComponent<ScoreManager>().enabled = true;
+        scoreManager.enabled = true;
     }
 }

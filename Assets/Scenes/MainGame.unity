@@ -2404,6 +2404,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1251701567}
   gameStartPanel: {fileID: 609660555}
   player: {fileID: 214295027}
+  scoreManager: {fileID: 1919252185}
   HighScoreManager: {fileID: 1361892818}
   highScorePlaceHolder: {fileID: 771065747}
 --- !u!1 &2013512593
